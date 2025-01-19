@@ -1,0 +1,187 @@
+.contact-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Grotesk", serif;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin: 8px;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(0.4);
+    z-index: 0;
+}
+
+.close-container {
+    position: absolute;
+    padding: 20px;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.close-container:hover {
+    color: #c3c3c3;
+}
+
+.close-container svg {
+    font-size: 1.2rem;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    color: #fff;
+}
+
+.form-header h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    color: rgb(143, 220, 152);
+}
+
+.form-container {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-input::placeholder {
+    color: #fff;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #8b8b8b;
+}
+
+.form-textarea {
+    height: 100px;
+    resize: none;
+}
+
+.form-submit {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: rgb(34, 34, 34);
+}
+
+.form-footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-footer h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.form-footer p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* Модальне вікно */
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.modal-container h2 {
+    margin-bottom: 10px;
+}
+
+.modal-container p {
+    margin-bottom: 20px;
+}
+
+.modal-close-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-close-button:hover {
+    background-color: #ff0000;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+/* Новий блок після закриття форми */
+.replacement-block {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 10px;
+    text-align: center;
+    z-index: -1;
+}
