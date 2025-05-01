@@ -10,55 +10,158 @@
     border: 2px solid rgb(0, 0, 0);
     color: rgb(0, 0, 0);
     border-radius: 10px;
+    position: relative;
+}
 
-    h1 {
-        letter-spacing: 2px;
-        font-size: 2rem;
-        margin: 0;
+.navbar h1 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.navbar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 40px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(65, 205, 81);
+    border-radius: 8px;
+    font-family: "Space Grotesk", serif;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin: 0;
+}
+
+.navbar button:hover {
+    background-color: rgb(143, 220, 152);
+    color: #000000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar ul {
+        gap: 1.5rem;
     }
 
-    button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 170px;
-        height: 40px;
-        background-color: white;
-        color: rgb(0, 0, 0); 
-        border: 2px solid rgb(65, 205, 81);
-        border-radius: 8px;
-        font-family: "Space Grotesk", serif;
-        font-weight: 400;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.1s ease;
-        margin: 0;
-    }
-
-    button:hover {
-        background-color: rgb(143, 220, 152);
-        color: #000000;
+    .navbar button {
+        width: 150px;
     }
 }
 
-.navbar {
-    ul {
-        list-style: none;
-        display: flex;
-        gap: 2rem;
-        margin: 0;
-        padding: 0;
-        align-items: center;
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 1.5rem;
     }
 
-    a {
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        display: flex;
-        align-items: center;
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
     }
 
-    a:hover {
-        text-decoration: underline;
+    .navbar ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        transition: all 0.5s ease;
+        z-index: 999;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        border-left: 2px solid black;
+    }
+
+    .navbar ul.active {
+        right: 0;
+    }
+
+    .navbar ul li {
+        margin: 1.5rem 0;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+        margin: 4px;
+    }
+
+    .navbar h1 {
+        font-size: 1.2rem;
+    }
+
+    .navbar ul {
+        width: 80%;
+    }
+
+    .navbar button {
+        width: 140px;
+        height: 35px;
+        font-size: 0.9rem;
     }
 }

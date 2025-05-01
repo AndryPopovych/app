@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Calculator from "./pages/Calculator";
 import FridgeChef from "./pages/FridgeChef";
-import Registration from "./pages/Registration";
+import ProfilePage from "./pages/ProfilePage";
 import "./styles/Global.css";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/fridge-chef" element={<FridgeChef />} />
-        <Route path="/registration" element={<Registration />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </Router>
   )

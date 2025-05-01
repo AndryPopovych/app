@@ -183,3 +183,121 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+.carousel{
+    margin-top: 20vh;
+}
+
+.questionsTxt {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    max-width: 40%;
+    margin-left: 3rem;
+    flex-direction: row;
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        background-color: rgb(143, 220, 152);
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: #555;
+    }
+}
+
+.questionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+.questionItem {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: #282828;
+    border: 2px solid black;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.questionItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(88, 222, 70, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.questionItem:hover::before {
+    opacity: 1;
+}
+
+.questionItem h1 {
+    font-size: 1.5rem;
+    color: #58de46;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.questionItem .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(88, 222, 70, 0.2);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.questionItem:hover .icon-container {
+    transform: scale(1.1);
+    background-color: rgba(88, 222, 70, 0.3);
+}
+
+.questionItem:hover {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 1);
+}
+
+.questionItem::after {
+    content: "Click to ask";
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.questionItem:hover::after {
+    color: #58de46;
+}
+
+
+.questionItem:hover {
+    animation: pulse 1.5s infinite;
+}
