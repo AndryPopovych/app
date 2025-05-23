@@ -24,7 +24,9 @@ const Navbar = () => {
         </div>
       </div>
       <ul className={isMenuOpen ? "active" : ""}>
-        <li>About us</li>
+        <li>
+          <Link to="AboutUs">About us</Link>
+        </li>
         <li>
           <Link to="/">Home</Link>
         </li>

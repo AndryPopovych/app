@@ -6,6 +6,8 @@ import Calculator from "./pages/Calculator";
 import FridgeChef from "./pages/FridgeChef";
 import ProfilePage from "./pages/ProfilePage";
 import "./styles/Global.css";
+import AboutUs from "./pages/AboutUs.jsx"
+
 
 const App = () => {
   return (
@@ -16,6 +18,7 @@ const App = () => {
         <Route path="/calculator" element={<Calculator />} />
         <Route path="/fridge-chef" element={<FridgeChef />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/AboutUs" element={<AboutUs />} />
       </Routes>
     </Router>
   )

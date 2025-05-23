@@ -157,21 +157,16 @@
     color: #58de46;
 }
 
-/* .cardItem p {
-    font-size: 0.9rem;
-    color: #7a7a7a; 
-} */
-
-.cardItem p:nth-child(1),
-.cardItem p:nth-child(4) {
-    font-size: 0.9rem;
+.cardItem:nth-child(1) p,
+.cardItem:nth-child(4) p {
     color: black;
-}
-  
-.cardItem p:nth-child(2),
-.cardItem p:nth-child(3) { 
     font-size: 0.9rem;
-    color: #7a7a7a;
+}
+
+.cardItem:nth-child(2) p,
+.cardItem:nth-child(3) p {
+    color: rgb(224, 224, 224);
+    font-size: 0.9rem;
 }
 
 .cardItem .learnMore {

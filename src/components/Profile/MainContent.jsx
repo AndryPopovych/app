@@ -1,8 +1,7 @@
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts"
-import { Calendar } from "./Calendar" // Імпортуємо наш новий компонент Calendar
+import { Calendar } from "./Calendar"
 
 const MainContent = () => {
-  // Додайте дані для графіка
   const data = [
     { day: "Mon", productivity: 40 },
     { day: "Tue", productivity: 30 },
@@ -44,7 +43,7 @@ const MainContent = () => {
         <div className="large-container2">
           <h3>Calendar</h3>
           <div className="calendar-wrapper">
-            <Calendar /> {/* Використовуємо наш новий компонент Calendar */}
+            <Calendar />
           </div>
         </div>
       </div>

@@ -40,11 +40,11 @@ const Home = () => {
             wellness goals.
           </p>
         </div>
-        <div className="cards">
+        <div className="cards" id="cards" >
           <div className="cardItem">
             <h3>BMR calculator</h3>
             <p>Calculate the daily calories essential for your body's core functions.</p>
-            <a href="#" className="learnMore">
+            <a href="/calculator" className="learnMore">
               Learn more →
             </a>
           </div>
